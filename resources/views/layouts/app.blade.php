@@ -8,7 +8,7 @@
 <link href="{{ asset('assets/bootstrap/css/ajax_cloudfare.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/bootstrap/css/fonts.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/bootstrap/css/datatable.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/bootstrap/css/theme5.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/bootstrap/css/theme6.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/bootstrap/css/ajax_jquery.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/bootstrap/awesome/css/all.min.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/bootstrap/awesome/css/fontawesome.min.css') }}" rel="stylesheet">
