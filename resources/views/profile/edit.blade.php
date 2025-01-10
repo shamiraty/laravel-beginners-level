@@ -1,17 +1,13 @@
-{{-- resources/views/profile/edit.blade.php --}}
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <h2>Profile Details</h2>
-
     {{-- Display success or error message --}}
     @if(session('success'))
         <div class="alert alert-success">
             {{ session('success') }}
         </div>
     @endif
-
     {{-- User details --}}
     <div class="card mb-4">
         <div class="card-header">User Information</div>

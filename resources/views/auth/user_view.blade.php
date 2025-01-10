@@ -1,6 +1,4 @@
-<!-- resources/views/users/show.blade.php -->
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <h4>User Details</h4>

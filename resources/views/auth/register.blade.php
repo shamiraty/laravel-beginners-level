@@ -1,49 +1,40 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container mt-3">
-
-
-
-
 <div class="row mt-4">
     <!-- Number of Users by Role -->
     @foreach($roleCounts as $role)
-    <div class="col-md-2"> <!-- Reduced column size -->
-        <div class="card shadow-sm text-center mt-2"> <!-- Reduced shadow and padding -->
-            <div class="card-body p-2"> <!-- Reduced padding inside the card -->
+    <div class="col-md-2">  
+        <div class="card shadow-sm text-center mt-2">  
+            <div class="card-body p-2">  
                 <h5 class="card-title">
-                    <i class="fa fa-users fa-lg text-info"></i><br> <!-- Reduced icon size -->
-                    {{ $role->role->name }}  <!-- Display role name -->
+                    <i class="fa fa-users fa-lg text-info"></i><br>  
+                    {{ $role->role->name }}   
                 </h5>
-                <h3 class="mb-1">{{ $role->users_count }}</h3>  <!-- Display user count with reduced bottom margin -->
-                <p class="mb-0">Users</p> <!-- Reduced margin at the bottom of text -->
+                <h3 class="mb-1">{{ $role->users_count }}</h3>  
+                <p class="mb-0">Users</p>  
             </div>
         </div>
     </div>
     @endforeach
 </div>
-
 <div class="row mt-4">
     <!-- Number of Users by Department -->
     @foreach($departmentCounts as $department)
-    <div class="col-md-2"> <!-- Reduced column size -->
-        <div class="card shadow-sm text-center mt-2"> <!-- Reduced shadow and padding -->
-            <div class="card-body p-2"> <!-- Reduced padding inside the card -->
+    <div class="col-md-2">  
+        <div class="card shadow-sm text-center mt-2">  
+            <div class="card-body p-2"> 
                 <h5 class="card-title">
-                    <i class="fa fa-building fa-lg text-primary"></i><br> <!-- Reduced icon size -->
-                    {{ $department->department->name }}  <!-- Display department name -->
+                    <i class="fa fa-building fa-lg text-primary"></i><br>  
+                    {{ $department->department->name }}  
                 </h5>
-                <h3 class="mb-1">{{ $department->users_count }}</h3>  <!-- Display user count with reduced bottom margin -->
-                <p class="mb-0">Users</p> <!-- Reduced margin at the bottom of text -->
+                <h3 class="mb-1">{{ $department->users_count }}</h3>  
+                <p class="mb-0">Users</p>  
             </div>
         </div>
     </div>
     @endforeach
 </div>
-
-
-
 
 <div class="card shadow-lg mt-3">
 <div class="card-body">
@@ -176,7 +167,6 @@
     </div>
 </div>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
     $(document).ready(function() {

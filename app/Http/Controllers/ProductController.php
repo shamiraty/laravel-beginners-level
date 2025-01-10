@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
@@ -9,8 +8,7 @@ use App\Models\District;
 use App\Models\Region;
 use Carbon\Carbon;
 use Symfony\Component\HttpFoundation\StreamedResponse;
-use Barryvdh\DomPDF\Facade as PDF;
-use ZipArchive;
+
 class ProductController extends Controller
 {
     public function index()
@@ -28,7 +26,7 @@ class ProductController extends Controller
         return view('products.index', compact('products', 'categories', 'statuses', 'regions', 'districts'));
     }
     
-    
+    //insert return page
     public function create()
 {
     $categories = Category::all();
@@ -37,7 +35,7 @@ class ProductController extends Controller
     return view('products.create', compact('categories','regions', 'districts'));
 }
 
-
+//insert operation
     public function store(Request $request)
     {
         $request->validate([
@@ -56,6 +54,7 @@ class ProductController extends Controller
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
 
+    //show edit page
     public function edit(Product $product)
     {
         $categories = Category::all();
@@ -64,6 +63,7 @@ class ProductController extends Controller
         return view('products.edit', compact('product', 'categories', 'districts','regions'));
     }
 
+    //update operation
     public function update(Request $request, Product $product)
     {
         $request->validate([
@@ -81,18 +81,20 @@ class ProductController extends Controller
         $product->update($request->all());
         return redirect()->route('products.index')->with('success', 'Product updated successfully.');
     }
-
+    //delete product
     public function destroy(Product $product)
     {
         $product->delete();
         return redirect()->route('products.index')->with('success', 'Product deleted successfully.');
     }
+
+    //show product
     public function show(Product $product)
 {
     return view('products.show', compact('product'));
 }
 
-
+//export excel
 public function exportCsv(Request $request)
 {
     $startDate = $request->input('start_date');

@@ -1,14 +1,10 @@
 <?php
-
-
 namespace App\Http\Controllers;
-
 use App\Models\Category;
 use App\Models\District;
 use App\Models\Product;
 use App\Models\Region;
 use Illuminate\Http\Request;
-
 class AnalyticsController extends Controller
 {
     public function index()

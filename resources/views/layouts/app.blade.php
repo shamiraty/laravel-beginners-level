@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Demo</title>
     <!-- Plugins: CSS -->
-    <link href="{{ asset('assets/bootstrap/css/ajax_cloudfare.css') }}" rel="stylesheet">
+<link href="{{ asset('assets/bootstrap/css/ajax_cloudfare.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/bootstrap/css/fonts.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/bootstrap/css/datatable.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/bootstrap/css/theme5.css') }}" rel="stylesheet">
@@ -23,9 +21,7 @@
             font-family: 'Roboto', sans-serif;     
             color: #333;
         }
-</style>
-<style>
-    #dataTable th, #dataTable td {
+        #dataTable th, #dataTable td {
         border: 1px solid #dee2e6;
         padding: 8px; 
         text-align: left; 
@@ -112,8 +108,7 @@
     </div>
     </body>
     <!-- Plugins: JS -->
-    <script src="{{ asset('assets/bootstrap/js/sweetalert.js') }}"></script>
-   
+<script src="{{ asset('assets/bootstrap/js/sweetalert.js') }}"></script>  
 <script src="{{ asset('assets/bootstrap/js/jquery.js') }}"></script>
 <script src="{{ asset('assets/bootstrap/js/jquery_ajax.js') }}"></script>
 <script src="{{ asset('assets/bootstrap/js/jquery_datatable.js') }}"></script>
@@ -128,8 +123,6 @@
 <script src="{{ asset('assets/bootstrap/js/datatable_copy.js') }}"></script>
 <script src="{{ asset('assets/bootstrap/js/pdfmake/pdfmake.min.js') }}"></script>
 <script src="{{ asset('assets/bootstrap/js/pdfmake/vfs_fonts.js') }}"></script>
- 
-
     <!-- Custom Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -173,5 +166,4 @@
             @endif
         });
     </script>
-   
 </html>

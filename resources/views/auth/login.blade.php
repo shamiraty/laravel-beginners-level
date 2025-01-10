@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container mt-3 d-flex justify-content-center">
     <div class="card shadow-lg col-12 col-md-6 col-lg-4">
@@ -10,7 +9,6 @@
         <div class="card-body">
             <form method="POST" action="{{ url('/login') }}">
                 @csrf
-
                 <div class="form-group mb-3">
                     <label for="email">Username</label>
                     <input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror" required>
@@ -39,7 +37,6 @@
 </div>
 
 @endsection
-
 @section('scripts')
 <script>
     // Toggle password visibility

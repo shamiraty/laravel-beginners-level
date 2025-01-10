@@ -58,8 +58,6 @@ class AuthController extends Controller
         return view('auth.register', compact('departments', 'roles', 'users', 'roleCounts', 'departmentCounts'));
     }
     
-    
-
     // Handle registration
     public function register(Request $request)
     {
@@ -132,7 +130,5 @@ class AuthController extends Controller
         $user->update($validated);
 
         return redirect()->route('register')->with('success', 'User updated successfully');
-    }
-
-    
+    }  
 }

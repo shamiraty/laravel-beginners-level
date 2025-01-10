@@ -1,17 +1,13 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container">
         <h1 class="mb-4">Departments</h1>
-
         @if(session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
             </div>
         @endif
-
         <a href="{{ route('departments.create') }}" class="btn btn-primary mb-4">Add New Department</a>
-
         <table class="table table-bordered">
             <thead>
                 <tr>

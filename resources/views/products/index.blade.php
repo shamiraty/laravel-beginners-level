@@ -1,9 +1,5 @@
 @extends('layouts.app')
-
 @section('content')
-
-
-
 <div class="card shadow-lg">
     <div class="card-header fw-bold text-uppercase">Filter Report and Product Table</div>
     <div class="card-body">
