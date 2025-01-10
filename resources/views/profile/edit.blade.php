@@ -31,9 +31,10 @@
             </ul>
         </div>
     </div>
-
+    <div class="card mb-4">
+        <div class="card-header">Change Password</div>
+        <div class="card-body">
     {{-- Edit form for password --}}
-    <h4>Change Password</h4>
     <form action="{{ route('profile.update') }}" method="POST">
         @csrf
 
@@ -57,4 +58,7 @@
         </button>
     </form>
 </div>
+</div>
+</div>
+
 @endsection

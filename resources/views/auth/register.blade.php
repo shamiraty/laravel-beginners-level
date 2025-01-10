@@ -1,17 +1,17 @@
 @extends('layouts.app')
 @section('content')
-<div class="container mt-3">
+<div class="container mt-1">
 <div class="row mt-4">
     <!-- Number of Users by Role -->
     @foreach($roleCounts as $role)
     <div class="col-md-2">  
-        <div class="card shadow-sm text-center mt-2">  
+        <div class="card shadow-sm text-center mt-1">  
             <div class="card-body p-2">  
                 <h5 class="card-title">
-                    <i class="fa fa-users fa-lg text-info"></i><br>  
+                    <i class="fa fa-users fa-2x  text-primary"></i><br>  
                     {{ $role->role->name }}   
                 </h5>
-                <h3 class="mb-1">{{ $role->users_count }}</h3>  
+                <button class="btn btn-warning">{{ $role->users_count }}</button>  
                 <p class="mb-0">Users</p>  
             </div>
         </div>
@@ -25,10 +25,10 @@
         <div class="card shadow-sm text-center mt-2">  
             <div class="card-body p-2"> 
                 <h5 class="card-title">
-                    <i class="fa fa-building fa-lg text-primary"></i><br>  
+                    <i class="fa fa-building fa-2x text-success"></i><br>  
                     {{ $department->department->name }}  
                 </h5>
-                <h3 class="mb-1">{{ $department->users_count }}</h3>  
+                <button class="btn btn-warning">{{ $department->users_count }}</button>  
                 <p class="mb-0">Users</p>  
             </div>
         </div>

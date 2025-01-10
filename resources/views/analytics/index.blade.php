@@ -20,11 +20,11 @@
         @endphp
 
         @foreach ($cards as $card)
-        <div class="col-lg-3 col-md-6 mb-3">
-            <div class="card shadow rounded-lg bg-light border-secondary">
+        <div class="col-lg-3 col-md-6 mb-1">
+            <div class="card shadow rounded-sm bg-light">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <i class="{{ $card['icon'] }} fa-3x text-info"></i>
+                        <i class="{{ $card['icon'] }} fa-3x text-primary"></i>
                         <div class="text-right">
                             <h3 class="font-weight-bold text-dark">{{ $card['count'] }}</h3>
                             <h6 class="font-weight-medium text-muted">{{ $card['title'] }}</h6>
@@ -36,7 +36,7 @@
         @endforeach
     </div>
 
-    <hr class="my-4">
+    
 
     <div class="row">
         <!-- Analytics Cards -->
@@ -50,11 +50,11 @@
         @endphp
 
         @foreach ($analytics as $analytic)
-        <div class="col-lg-3 col-md-6 mb-3">
-            <div class="card shadow rounded-lg bg-light border-light">
+        <div class="col-lg-3 col-md-6 mb-1">
+            <div class="card shadow rounded-sm bg-light border-light">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
-                        <i class="{{ $analytic['icon'] }} fa-3x text-info"></i>
+                        <i class="{{ $analytic['icon'] }} fa-3x text-warning"></i>
                         <div class="text-right">
                             <h3 class="font-weight-bold text-dark">Tsh{{ $analytic['value'] }}</h3>
                             <h6 class="font-weight-medium text-muted">{{ $analytic['title'] }}</h6>
@@ -66,11 +66,11 @@
         @endforeach
     </div>
 
-    <hr class="my-4">
+    
 
     <div class="row">
         <!-- Expiry Analytics Section -->
-        <div class="col-lg-4 col-md-6 mb-3">
+        <div class="col-lg-4 col-md-6 mb-1">
             <div class="card shadow rounded-lg bg-warning text-dark">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center">
