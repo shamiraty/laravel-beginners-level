@@ -51,7 +51,8 @@ php artisan make:model Role -mcr
 
 ```
 - District migration file
-![DISTRICTS](https://github.com/user-attachments/assets/b9b8bae0-a474-42cb-9150-bb593728e3a0)
+ ![DISTRICTS](https://github.com/user-attachments/assets/ee1a0b6d-e6cf-4ca6-b14b-db60f9f8b20d)
+
 
 ```php
 
@@ -67,7 +68,8 @@ php artisan make:model Role -mcr
 ```
 
 - Region migration file 
-![REGIONS](https://github.com/user-attachments/assets/941936f1-c477-4ab8-b740-22c33068e679)
+ ![REGIONS](https://github.com/user-attachments/assets/047eb67e-8ed7-4902-8074-35a3d9f2e629)
+
 
 ```php
 public function up()
@@ -82,7 +84,8 @@ public function up()
 ```
 
 - Category migration file
-![CATEGORY](https://github.com/user-attachments/assets/57fb86cd-9258-4694-be30-82065b215021)
+ ![CATEGORY](https://github.com/user-attachments/assets/fef8d729-5da3-461f-9524-963033a4177b)
+
 
 ```php
     public function up()
