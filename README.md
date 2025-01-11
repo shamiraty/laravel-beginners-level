@@ -1,66 +1,150 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## SECTION A:  MODEL CONTROLLER AND MIGRATIONS
 
-## About Laravel
+**1. create the following model in your terminal**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```php
+php artisan make:model Category -mcr
+php artisan make:model Department -mcr
+php artisan make:model District -mcr
+php artisan make:model Product -mcr
+php artisan make:model Region -mcr
+php artisan make:model Role -mcr
+```
+**1.go to app->database->migrations put the following code to each migrations  find a line 'fuction up'**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+```Role migration file```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```php
 
-## Learning Laravel
+ public function up(): void
+    {
+        Schema::create('roles', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+        });
+    }
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```Department migration file```
 
-### Premium Partners
+```php
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+  public function up(): void
+    {
+        Schema::create('departments', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->unique();
+            $table->timestamps();
+        });
+    }
+    
 
-## Contributing
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+```District migration file```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```php
 
-## License
+    public function up()
+{
+    Schema::create('districts', function (Blueprint $table) {
+        $table->id();
+        $table->string('name')->unique();
+        $table->timestamps();
+    });
+}
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+
+
+
+
+```Region migration file```
+
+```php
+public function up()
+    {
+        Schema::create('regions', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->unique();
+            $table->timestamps();
+        });
+    }
+    
+
+
+```
+
+
+
+
+```Category migration file```
+
+```php
+    public function up()
+{
+    Schema::create('categories', function (Blueprint $table) {
+        $table->id();
+        $table->string('name')->unique();
+        $table->timestamps();
+    });
+}
+
+
+```
+
+
+
+```Product migration file```
+
+```php
+    public function up()
+{
+    Schema::create('products', function (Blueprint $table) {
+        $table->id();
+        $table->string('product_name');
+        $table->date('registered_date');
+        $table->decimal('purchasing_price', 10, 2);
+        $table->decimal('selling_price', 10, 2);
+        $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+        $table->string('status');
+        $table->foreignId('region_id')->constrained('regions')->onDelete('cascade');
+        $table->foreignId('district_id')->constrained('districts')->onDelete('cascade');
+        $table->date('expiry_date');
+        $table->timestamps();
+    });
+}
+
+
+```
+**2. create a migration file to update users  model that by default it has its model  now we add fields**
+
+```php
+php artisan make:migration add_field_to_users_table --table=users
+
+```
+
+```User migration file  open new  created  migration  and add this```
+
+```php
+
+  public function up(): void
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('phone')->unique()->nullable();
+            $table->foreignId('department_id')->nullable()->constrained('departments');
+            $table->foreignId('role_id')->nullable()->constrained('roles');
+        });
+    }
+    
+
+```
