@@ -1,10 +1,11 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-## Section A: Model, Controller, and Migrations
+## SECTION A
+### MODEL, CONTROLLER AND MIGRATIONS
 
 This section outlines the steps to create models, controllers, and migrations for a Laravel project.
-
-### 1. Create Models with Controllers and Migrations
+ 
+### CREATE MODELS WITH CONTROLLERS AND MIGRATIONS
 
 Run the following commands in your terminal to create the models, controllers, and migrations:
 
@@ -135,4 +136,171 @@ php artisan make:migration add_field_to_users_table --table=users
     }
     
 
+```
+
+
+## SECTION B
+### MODELS
+
+This section outlines the steps to define model fields  and constraints like relation ships for a Laravel project.
+
+###  MODEL DEFINITION
+
+```Category Model```
+```php
+class Category extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['name'];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+}
+
+```
+
+```Department Model```
+```php
+class Department extends Model
+{
+    protected $fillable = ['name'];
+}
+```
+
+```District Model```
+```php
+class District extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['name'];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+}
+```
+
+
+```Product Model```
+```php
+class Product extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'product_name',
+        'registered_date',
+        'purchasing_price',
+        'selling_price',
+        'category_id',
+        'status',
+        'region_id',
+        'district_id',
+        'expiry_date',
+    ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
+
+    public function district()
+    {
+        return $this->belongsTo(District::class);
+    }
+}
+```
+
+
+```Region Model```
+```php
+class Region extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['name'];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+}
+
+```
+
+
+```Role Model```
+```php
+class Role extends Model
+{
+    protected $fillable = ['name'];
+}
+```
+
+
+```User Model```
+```php
+class User extends Authenticatable
+{
+    /** @use HasFactory<\Database\Factories\UserFactory> */
+    use HasFactory, Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var list<string>
+     */
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'phone',
+        'department_id',
+        'role_id'
+    ];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var list<string>
+     */
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+        ];
+    }
+
+    public function department()
+{
+    return $this->belongsTo(Department::class);
+}
+
+public function role()
+{
+    return $this->belongsTo(Role::class);
+}
+
+}
 ```
