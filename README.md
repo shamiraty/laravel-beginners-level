@@ -20,7 +20,8 @@ php artisan make:model Role -mcr
 
 **1. Navigate to the ```database/migrations``` directory. Open each migration file and add the following code to the up method.**
 
-```Role migration file```
+- Role migration file 
+![ROLES](https://github.com/user-attachments/assets/8bdcc85e-3312-4b87-b778-a647db1b357e)
 
 ```php
 
@@ -33,8 +34,8 @@ php artisan make:model Role -mcr
     }
 
 ```
-
-```Department migration file```
+- Department migration file 
+![DEPARTMENTS](https://github.com/user-attachments/assets/27ff51a9-30a1-4415-8097-3a60938c08d6)
 
 ```php
 
@@ -49,8 +50,8 @@ php artisan make:model Role -mcr
     
 
 ```
-
-```District migration file```
+- District migration file
+![DISTRICTS](https://github.com/user-attachments/assets/b9b8bae0-a474-42cb-9150-bb593728e3a0)
 
 ```php
 
@@ -65,7 +66,8 @@ php artisan make:model Role -mcr
 
 ```
 
-```Region migration file```
+- Region migration file 
+![REGIONS](https://github.com/user-attachments/assets/941936f1-c477-4ab8-b740-22c33068e679)
 
 ```php
 public function up()
@@ -77,11 +79,10 @@ public function up()
         });
     }
     
-
-
 ```
 
-```Category migration file```
+- Category migration file
+![CATEGORY](https://github.com/user-attachments/assets/57fb86cd-9258-4694-be30-82065b215021)
 
 ```php
     public function up()
@@ -95,7 +96,8 @@ public function up()
 
 ```
 
-```Product migration file```
+- Product migration file
+![PRODUCTS](https://github.com/user-attachments/assets/2d14edff-5fcc-43c7-8b1d-8fc8960ab72f)
 
 ```php
     public function up()
@@ -117,6 +119,8 @@ public function up()
 
 ```
 **2. Update the Users Table to add additional fields to the users table** 
+![USERS](https://github.com/user-attachments/assets/7ed4fc35-8964-4166-9301-849f7dd165f7)
+
 - Run the following command to create a migration file:
 
 ```bash
@@ -137,7 +141,6 @@ php artisan make:migration add_field_to_users_table --table=users
     
 
 ```
-
 
 ## SECTION B
 ### MODELS
