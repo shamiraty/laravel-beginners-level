@@ -79,7 +79,7 @@ class AuthController extends Controller
             'role_id' => $validated['role_id'],
         ]);
 
-        return redirect()->route('register')->with('success', 'Registration successful. Please log in.');
+        return redirect()->route('register')->with('success', 'Registration successful.');
     }
 
     // Handle logout

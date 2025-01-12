@@ -102,7 +102,7 @@
 </nav>
 
     <!-- Main Content -->
-    <body class="bg-light">
+    <body class="">
     <div class="container mt-1 pt-2">   
                 @yield('content')          
     </div>
