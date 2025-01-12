@@ -7,7 +7,7 @@
 ![re](https://github.com/user-attachments/assets/9136ff94-b661-4502-8f0f-54a6413fc805)
 ![www](https://github.com/user-attachments/assets/ef247b44-20a9-4e65-a217-be04595542fb)
 ![productss](https://github.com/user-attachments/assets/2b40f099-de8f-4e97-b015-3b2d37fae1fd)
-![productss](https://github.com/user-attachments/assets/53b22a43-bf50-41ac-bc60-dce422b63b1f)
+
 
 # Laravel for Beginners
 
