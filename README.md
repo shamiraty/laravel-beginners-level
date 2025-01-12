@@ -3,6 +3,10 @@
 ## INVENTORY MIS PROJECT  DOCUMENTATION
 ### SYSTEM DEVELOPMENT & TECHNOLOGIES
 ### OPEN-SOURCE PROJECTS & TUTORIAL SERIES
+
+[Live Demo](http://projectforce.infinityfreeapp.com/)
+```uploaded 12/1/2025```
+
 ![analytics](https://github.com/user-attachments/assets/ebb83eb9-ac7d-47d2-9285-728bcc00dc6b)
 ![re](https://github.com/user-attachments/assets/9136ff94-b661-4502-8f0f-54a6413fc805)
 ![www](https://github.com/user-attachments/assets/ef247b44-20a9-4e65-a217-be04595542fb)
@@ -15,29 +19,25 @@ Welcome to the **Laravel for Beginners** documentation. This guide will help you
 
 ---
 
-## Introduction
+## 1. Introduction
 This documentation aims to teach and demonstrate how to create Laravel applications with practical, real-world examples. Unlike many online tutorials that provide incomplete guidance, this guide offers in-depth explanations and solutions to real-world problems using programming.
 
-### Target Audience
+### 2. Target Audience
 This tutorial is designed for:
 - Academic students working on their final year projects.
 - Private individuals aspiring to become experts in web development.
 
 ---
 
-## Problem Statement
-The main purpose of this tutorial is to bridge the gap between theoretical tutorials and practical application. Many online resources fail to provide applicable knowledge for real-life scenarios. This guide focuses on solving problems using programming in the real world.
+## 3. Problem Statement
+Many tutorials on the internet show only basic examples and often skip important concepts. These tutorials may make web development look easy, but they don’t teach the skills needed to create real-world applications. Developers who follow these tutorials often struggle to handle more advanced challenges. Building web applications involves many techniques that need proper explanation to help developers become skilled and confident.
+
+## 4. Main Objective
+The main goal of this tutorial is to explain important steps in creating a Laravel application by solving a real-world problem: an Inventory Management System (MIS). It provides clear, step-by-step instructions to help developers learn practical skills, understand key concepts, and follow best practices for building professional applications.
 
 ---
 
-## Main Objective
-The main objective of this tutorial is to provide comprehensive, step-by-step guidance for:
-- Academic students completing their final year projects.
-- Individuals enhancing their web development skills.
-
----
-
-## Topics Covered
+## 5. Topics Covered
 Here are the important topics we will cover:
 - PHP Artisan installation
 - XAMPP installation
@@ -52,7 +52,7 @@ Here are the important topics we will cover:
 
 ---
 
-## Technologies Used
+## 6. Technologies Used
 This tutorial will cover the following technologies:
 - **Frontend:** HTML, CSS, JavaScript, AJAX, jQuery
 - **Backend:** PHP, SQL, MySQL
@@ -60,7 +60,7 @@ This tutorial will cover the following technologies:
 
 ---
 
-## Development Software Installation
+## 7. Development Software Installation
 Before proceeding, download and install the following development tools:
 
 1. **PHP Artisan**
@@ -69,14 +69,14 @@ Before proceeding, download and install the following development tools:
 
 ---
 
-## Laravel Framework Installation
-### Install Laravel Framework
+## 8. Laravel Framework Installation
+
 Open your terminal and run:
 ```bash
 composer global require laravel/installer
 ```
 
-### Create a New Laravel Project
+## 9. Create a New Laravel Project
 To create a new Laravel project, run:
 ```bash
 laravel new project
@@ -84,7 +84,7 @@ laravel new project
 
 ---
 
-## Model, Controller, and Migration Creation
+## 10. Model, Controller, and Migration Creation
 To create models, controllers, and migrations for the project, open your terminal and run:
 ```bash
 php artisan make:model Category -mcr
@@ -97,7 +97,7 @@ php artisan make:model Role -mcr
 
 ---
 
-## Project Features
+## 11. Project Features
 The following features will be implemented in this project:
 
 | Feature               | Description                                      |
@@ -113,7 +113,7 @@ The following features will be implemented in this project:
 
 ---
 
-**1. Navigate to the ```database/migrations``` directory. Open each migration file and add the following code to the up method.**
+**11.1 Navigate to the ```database/migrations``` directory. Open each migration file and add the following code to the up method.**
 
 - Role migration file 
 ![ROLES](https://github.com/user-attachments/assets/8bdcc85e-3312-4b87-b778-a647db1b357e)
@@ -216,7 +216,7 @@ public function up()
 }
 
 ```
-**2. Update the Users Table to add additional fields to the users table** 
+**11.2. Update the Users Table to add additional fields to the users table** 
 ![USERS](https://github.com/user-attachments/assets/7ed4fc35-8964-4166-9301-849f7dd165f7)
 
 - Run the following command to create a migration file:
@@ -240,12 +240,7 @@ php artisan make:migration add_field_to_users_table --table=users
 
 ```
 
-## SECTION B
-### MODELS
-
-This section outlines the steps to define model fields  and constraints like relation ships for a Laravel project.
-
-###  MODEL DEFINITION
+**11.3 This section outlines the steps to define model fields  and constraints like relation ships for a Laravel project.**
 
 ```Category Model```
 ```php
@@ -405,3 +400,23 @@ public function role()
 
 }
 ```
+**After completing this, proceed to the other parts, such as the controller, routes, and templates, as outlined in the source code provided above.**
+
+**My Contacts**
+
+**WhatsApp**  
++255675839840  
++255656848274
+
+**YouTube**  
+[Visit my YouTube Channel](https://www.youtube.com/channel/UCjepDdFYKzVHFiOhsiVVffQ)
+
+**Telegram**  
++255656848274  
++255738144353
+
+**PlayStore**  
+[Visit my PlayStore Developer Page](https://play.google.com/store/apps/dev?id=7334720987169992827&hl=en_US&pli=1)
+
+**GitHub**  
+[Visit my GitHub](https://github.com/shamiraty/)
