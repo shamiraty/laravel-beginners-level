@@ -4,39 +4,46 @@
 <div class="row mt-4">
     <!-- Number of Users by Role -->
     @foreach($roleCounts as $role)
-    <div class="col-md-2">  
-        <div class="card shadow-sm text-center mt-1">  
-            <div class="card-body p-2">  
+    <div class="col-md-3 col-sm-6 mb-3">  
+        <div class="card shadow-sm text-center h-100">  
+            <div class="card-body">
                 <h5 class="card-title">
-                    <i class="fa fa-users fa-2x  text-primary"></i><br>  
-                    {{ $role->role->name }}   
+                    <i class="fa fa-users fa-2x text-primary mb-2"></i><br>  
+                    <span class="text-uppercase">{{ $role->role->name }}</span>
                 </h5>
-                <button class="btn btn-warning">{{ $role->users_count }}</button>  
-                <p class="mb-0">Users</p>  
-            </div>
-        </div>
-    </div>
-    @endforeach
-</div>
-<div class="row mt-4">
-    <!-- Number of Users by Department -->
-    @foreach($departmentCounts as $department)
-    <div class="col-md-2">  
-        <div class="card shadow-sm text-center mt-2">  
-            <div class="card-body p-2"> 
-                <h5 class="card-title">
-                    <i class="fa fa-building fa-2x text-success"></i><br>  
-                    {{ $department->department->name }}  
-                </h5>
-                <button class="btn btn-warning">{{ $department->users_count }}</button>  
-                <p class="mb-0">Users</p>  
+                <button class="btn btn-warning btn-sm px-3 py-1">
+                    {{ $role->users_count }}
+                </button>  
+                <p class="mt-2 mb-0 text-muted">Users</p>  
             </div>
         </div>
     </div>
     @endforeach
 </div>
 
-<div class="card shadow-lg mt-3">
+<div class="row mt-4">
+    <!-- Number of Users by Department -->
+    @foreach($departmentCounts as $department)
+    <div class="col-md-3 col-sm-6 mb-3">  
+        <div class="card shadow-sm text-center h-100">  
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="fa fa-building fa-2x text-info mb-2"></i><br>  
+                    <span class="text-uppercase">{{ $department->department->name }}</span>
+                </h5>
+                <button class="btn btn-warning btn-sm px-3 py-1">
+                    {{ $department->users_count }}
+                </button>  
+                <p class="mt-2 mb-0 text-muted">Users</p>  
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
+
+
+
+<div class="card shadow-lg mt-3 mb-5">
 <div class="card-body">
     <div class="row">
         <!-- Registration Form (Left Column) -->
