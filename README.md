@@ -4,6 +4,9 @@
 ### SYSTEM DEVELOPMENT & TECHNOLOGIES
 ### OPEN-SOURCE PROJECTS & TUTORIAL SERIES
 ![analytics](https://github.com/user-attachments/assets/ebb83eb9-ac7d-47d2-9285-728bcc00dc6b)
+![re](https://github.com/user-attachments/assets/9136ff94-b661-4502-8f0f-54a6413fc805)
+![www](https://github.com/user-attachments/assets/ef247b44-20a9-4e65-a217-be04595542fb)
+
 
 # Laravel for Beginners
 
