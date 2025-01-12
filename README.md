@@ -1,5 +1,14 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
+## INVENTORY MIS PROJECT  DOCUMENTATION
+### SYSTEM DEVELOPMENT & TECHNOLOGIES
+### OPEN-SOURCE PROJECTS & TUTORIAL SERIES
+![analytics](https://github.com/user-attachments/assets/ebb83eb9-ac7d-47d2-9285-728bcc00dc6b)
+![re](https://github.com/user-attachments/assets/9136ff94-b661-4502-8f0f-54a6413fc805)
+![www](https://github.com/user-attachments/assets/ef247b44-20a9-4e65-a217-be04595542fb)
+![productss](https://github.com/user-attachments/assets/2b40f099-de8f-4e97-b015-3b2d37fae1fd)
+
+
 # Laravel for Beginners
 
 Welcome to the **Laravel for Beginners** documentation. This guide will help you get started with creating Laravel projects from scratch. My name is Sameer, a Data Scientist and Information System Analyst. I am providing free source codes, detailed documentation, and video tutorials to teach you important steps in developing Laravel applications.
